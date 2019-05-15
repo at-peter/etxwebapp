@@ -7,7 +7,7 @@ function App() {
     <Mybutton>
 
     </Mybutton>
-    <br></br>
+    
     <Mybutton>
     </Mybutton>
     </div>
