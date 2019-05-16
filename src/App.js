@@ -1,15 +1,11 @@
 import React from 'react';
 import Mybutton from './componants/Matbutton';
-
+import InputField from './componants/InputField';
 
 function App() {
   return (<div>
-    <Mybutton>
-
-    </Mybutton>
-    
-    <Mybutton>
-    </Mybutton>
+    <InputField>
+    </InputField>
     </div>
   );
 }

@@ -1,9 +1,10 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
+import { tsPropertySignature } from '@babel/types';
 
-const Mybutton = () => (
-  <Button variant="contained" color="primary">
-    Play games
+const Mybutton = (props) => (
+  <Button variant={props.variant} color="primary" size='large' onClick={props.onClick}>
+    {props.text}
   </Button>
 );
 
