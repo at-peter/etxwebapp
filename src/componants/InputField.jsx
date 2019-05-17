@@ -3,6 +3,7 @@ import MyButton from './Matbutton';
 import MyField from './InputForm';
 import Plot from 'react-plotly.js';
 
+
 export default class InputField extends React.Component{
 
     constructor(props){

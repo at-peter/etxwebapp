@@ -1,12 +1,13 @@
 import React from 'react';
-import Mybutton from './componants/Matbutton';
 import InputField from './componants/InputField';
-
+import PlotContainer from './componants/plotDisplay';
 function App() {
   return (<div>
     <InputField>
     </InputField>
-    </div>
+    <PlotContainer>
+    </PlotContainer>
+    </div> 
   );
 }
 
