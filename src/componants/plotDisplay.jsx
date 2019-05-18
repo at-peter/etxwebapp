@@ -1,5 +1,6 @@
 import React from 'react';
 import * as d3 from 'd3';
+import Plot from 'react-plotly.js';
 
 export default class PlotContainer extends React.Component{
 
@@ -25,8 +26,27 @@ export default class PlotContainer extends React.Component{
     render() {
         return(
         <div>
-              <div className='chart'></div>
-              {this.testfunction()}
+              <div className='chart'>
+              <Plot
+                data={[
+                {
+                    // this is the 
+                    x: [1, 2, 3, 4],
+                    y: [2, 6, 3, 10],
+                    type: 'scatter',
+                    mode: 'lines+points',
+                    marker: {color: 'red'},
+                },
+                // this is the bar plot 
+                {type: 'bar', 
+                x: [1, 2, 3, 5], 
+                y: [2, 3, 3, 8],
+                marker: {color: 'blue'}}
+                ]}
+                layout={ {width: 400, height: 240, title: 'My Fancy Plot'} }
+            ></Plot>
+              </div>
+              
         </div>
       
         

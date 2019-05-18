@@ -49,6 +49,17 @@ export default class InputField extends React.Component{
         // this needs to render all three componants: submit button, ask and buy fields. 
         return (
             <div>
+                <MyField 
+                    value={this.state.buyfield}
+                    onChange={this.handleChange}
+                    name="Buy Price"
+                ></MyField>
+                <br></br>
+                <MyField
+                    value={this.state.askfield}
+                    onChange={this.handleChange}
+                    name="Ask Price"></MyField>
+                <br></br>
                 <MyButton 
                     text='Alert' 
                     variant='fab' 
@@ -59,14 +70,10 @@ export default class InputField extends React.Component{
                     onClick={() => this.handleDisplay()} 
                     text='Display' 
                 ></MyButton>
-                {this.state.buyfield}
+                <p>
+                {this.state.buyfield}</p>
                 <br></br>
-                <MyField 
-                    value={this.state.buyfield}
-                    onChange={this.handleChange}
-                ></MyField>
-                <br></br>
-                <form>
+                {/* <form>
                 <input
                 value={this.state.buyfield}
                 name="buyfield"
@@ -77,20 +84,7 @@ export default class InputField extends React.Component{
                 <button 
                 onClick={this.onSubmit}>
                 submit
-                </button>
-                <Plot
-                data={[
-                {
-                    x: [1, 2, 3],
-                    y: [2, 6, 3],
-                    type: 'scatter',
-                    mode: 'lines+points',
-                    marker: {color: 'red'},
-                },
-                {type: 'bar', x: [1, 2, 3], y: [2, 5, 3]},
-                ]}
-                layout={ {width: 400, height: 240, title: 'My Fancy Plot'} }
-            ></Plot>;
+                </button> */}
             </div>
         );
         }
