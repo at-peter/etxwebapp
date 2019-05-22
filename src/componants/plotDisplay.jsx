@@ -43,7 +43,7 @@ export default class PlotContainer extends React.Component{
                 y: [2, 3, 3, 8],
                 marker: {color: 'blue'}}
                 ]}
-                layout={ {width: 400, height: 240, title: 'My Fancy Plot'} }
+                layout={ {width: 400, height: 240, title: 'ETX Bid Prices'} }
             ></Plot>
               </div>
               

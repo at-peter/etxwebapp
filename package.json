@@ -6,7 +6,9 @@
     "@material-ui/core": "^3.9.3",
     "d3": "^5.9.2",
     "plotly.js": "^1.47.4",
+    "prop-types": "^15.7.2",
     "react": "^16.8.6",
+    "react-d3": "^0.4.0",
     "react-dom": "^16.8.6",
     "react-plotly.js": "^2.3.0",
     "react-scripts": "3.0.0"

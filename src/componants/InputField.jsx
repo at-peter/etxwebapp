@@ -73,18 +73,6 @@ export default class InputField extends React.Component{
                 <p>
                 {this.state.buyfield}</p>
                 <br></br>
-                {/* <form>
-                <input
-                value={this.state.buyfield}
-                name="buyfield"
-                onChange={(event) => this.handleChange(event)}
-                />
-                </form>
-                <br/>
-                <button 
-                onClick={this.onSubmit}>
-                submit
-                </button> */}
             </div>
         );
         }
