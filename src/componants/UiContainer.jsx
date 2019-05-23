@@ -4,7 +4,7 @@ import MyField from './InputForm';
 import Plot from 'react-plotly.js';
 
 
-export default class InputField extends React.Component{
+export default class UiContainer extends React.Component{
 
     constructor(props){
         super(props);
@@ -68,7 +68,8 @@ export default class InputField extends React.Component{
                 <MyButton 
                     variant='contained' 
                     onClick={() => this.handleDisplay()} 
-                    text='Display' 
+                    text='Update' 
+                    color='primary'
                 ></MyButton>
                 <p>
                 {this.state.buyfield}</p>
