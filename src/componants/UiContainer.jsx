@@ -1,8 +1,6 @@
 import React from 'react';
 import MyButton from './Matbutton';
 import MyField from './InputForm';
-import Plot from 'react-plotly.js';
-
 
 export default class UiContainer extends React.Component{
 
@@ -10,70 +8,73 @@ export default class UiContainer extends React.Component{
         super(props);
         // state is set here and includes the state for all the children 
         this.state = {
-            buttontoggle : 0,
             buyfield : 0, 
-            askfield : 0,
-            displayValue : null
+            askfield : 0
         };
         
+        this.handleChange = this.handleChange.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
+        this.handleDisplay = this.handleDisplay.bind(this);
     }
     
-    handleSubmit() {
-        // this.setState({buttontoggle: !this.prevstate})
-        console.log('Click happened');
-        // this.setState(state => ({buyfield :state.buyfield + 1
-        // }));
-        alert(this.state.displayValue);
-    }
 
     onSubmit = () => {
+        // Debugging tool 
         console.log(this.state);
-        
     };
 
+    _handleSubmit() {
+        this.setState(state => ({displayValue :this.prevstate}))
+        alert('A value was submitted: ' + this.state.buyfield);
+    }
 
     handleDisplay() {
-        this.setState(state => ({displayValue : this.state.buyfield}));
-       
+        this.setState(state => ({buyfield : this.state.buyfield}));
     }
-    handleChange(event){ 
-        // This 
-        // this.setState({buyfield : event.target.value })
 
-        this.setState({
-            [event.target.name] : event.target.value
-        });
+    handleChange(event){ 
+        // This is used for updating the values in the ask and buy fields
+        this.setState({value : event.target.value })
+
+        // this.setState({
+        //     [event.target.name] : event.target.value
+        // });
     }
 
     render() {
         // this needs to render all three componants: submit button, ask and buy fields. 
         return (
             <div>
+                {/* <Pallet> */}
                 <MyField 
                     value={this.state.buyfield}
-                    onChange={this.handleChange}
-                    name="Buy Price"
+                    onChange={this.handleDisplay}
+                    name="buyfield"
                 ></MyField>
-                <br></br>
                 <MyField
                     value={this.state.askfield}
                     onChange={this.handleChange}
-                    name="Ask Price"></MyField>
+                    name="Ask Price">
+                </MyField>
                 <br></br>
-                <MyButton 
+                {/* <MyButton 
                     text='Alert' 
                     variant='fab' 
-                    onClick= {() => this.handleSubmit()}>
-                </MyButton>
+                    onClick= {() => this.handleSubmit()}
+                    type="submit"
+                    >
+                </MyButton> */}
                 <MyButton 
                     variant='contained' 
-                    onClick={() => this.handleDisplay()} 
-                    text='Update' 
+                    onClick={() => this.onSubmit()} 
+                    text='Post Bids' 
                     color='primary'
                 ></MyButton>
                 <p>
+                    Current buy value is:
                 {this.state.buyfield}</p>
                 <br></br>
+                {/* </Pallet> */}
             </div>
         );
         }

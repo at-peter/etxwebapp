@@ -16,10 +16,10 @@ function SimpleAppBar(props) {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="primary">
+      <AppBar position="static" color='primary'>
         <Toolbar>
           <Typography variant="h6" color="inherit">
-          ETX Simulator UI
+          ETX Market Participant Demo 
           </Typography>
         </Toolbar>
       </AppBar>
