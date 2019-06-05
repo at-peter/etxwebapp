@@ -6,6 +6,9 @@ import { ThemeProvider } from '@material-ui/styles';
 import { createMuiTheme } from '@material-ui/core/styles';
 import green from '@material-ui/core/colors/green';
 import Form from './componants/SimpleForm';
+import Plot from 'react-plotly.js';
+import io from 'socket.io';
+import server from 'http';
 
 class App extends React.Component{
   
@@ -19,6 +22,11 @@ class App extends React.Component{
       },
   }});
 
+  componentDidMount(){
+    const socket = io.connect('http://localhost');
+    socket.emit()
+  }
+
   onSubmit = (fields) => {
     console.log('App got: ', fields);
   }
@@ -28,9 +36,9 @@ class App extends React.Component{
     <ThemeProvider theme={this.theme}> 
       <div>
         <SimpleAppBar></SimpleAppBar>
-      {/* <ETXDataDisplay>
+      <ETXDataDisplay>
       </ETXDataDisplay>
-        <UiContainer/>  */}
+        {/* <UiContainer/>  */}
         <Form onSubmit={fields => this.onSubmit(fields) }></Form>
 
       </div> 

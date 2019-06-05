@@ -14,7 +14,6 @@ export default class Form extends React.Component {
         
     }
     
-
     _change = e => {
         this.setState({
             [e.target.name]: e.target.value
