@@ -6,8 +6,11 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 
 const styles = {
-  root: {
-    flexGrow: 1,
+  bob: {
+    flexGrow: 3,
+    palette: {
+      colorprimary: 'red',
+      colorsecondary: '#ffc333'}
   },
 };
 
@@ -15,8 +18,8 @@ function SimpleAppBar(props) {
   const { classes } = props;
 
   return (
-    <div className={classes.root}>
-      <AppBar position="static" color='primary'>
+    <div className={classes.bob}>
+      <AppBar position="relative">
         <Toolbar>
           <Typography variant="h6" color="inherit">
           ETX Market Participant Demo 

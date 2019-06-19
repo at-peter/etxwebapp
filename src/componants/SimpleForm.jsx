@@ -1,6 +1,9 @@
 import React from 'react';
-import TextField from '@material-ui/core/TextField'
-import Button from '@material-ui/core/Button'
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+import Paper from '@material-ui/core/Paper';
+
+
 
 export default class Form extends React.Component {
 
@@ -24,11 +27,13 @@ export default class Form extends React.Component {
         e.preventDefault();
         this.props.onSubmit(this.state)
         // console.log(this.state)
+        this.setState({buyvalue: '', askvalue: ''});
     };
 
 
     render() {
         return(
+            <Paper>
             <form>
                 <label>
                     {/* Buy Price : */}
@@ -58,11 +63,12 @@ export default class Form extends React.Component {
                 <br />
                 <Button 
                 onClick={e => this._onSubmit(e)}
-                color = 'primary'
+                color = 'secondary'
                 size = 'large'
                 variant = 'contained'
                 >Submit Bids</Button>
-            </form>                
+            </form>  
+            </Paper>              
         )
     }
 }
