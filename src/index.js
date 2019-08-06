@@ -14,7 +14,7 @@ const mytheme = createMuiTheme({
         secondary: {
           main: purple[50] //'#ffc333', 
         },
-        type : 'dark'
+        type : 'light'
       },
   });
 console.log(green);

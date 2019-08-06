@@ -19,9 +19,14 @@ function SimpleAppBar(props) {
 
   return (
     <div className={classes.bob}>
-      <AppBar position="relative">
+      <AppBar 
+      position="relative"
+      width={1/4}>
+        
         <Toolbar>
-          <Typography variant="h6" color="inherit">
+          <Typography 
+          variant="h6" 
+          color="inherit">
           ETX Market Participant Demo 
           </Typography>
         </Toolbar>
